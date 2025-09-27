@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Code2, Users, Briefcase, Zap, ArrowRight, Github, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { GlassCard } from '@/components/ui/glass-card';
+import { ThemeToggle } from '@/components/ui/theme-toggle';
 import { useAuth } from '@/contexts/AuthContext';
 
 const Home: React.FC = () => {
@@ -42,6 +43,7 @@ const Home: React.FC = () => {
   if (isAuthenticated) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-background via-background to-secondary/10">
+        <ThemeToggle />
         <div className="container mx-auto px-4 py-16 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -76,6 +78,7 @@ const Home: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-secondary/10">
+      <ThemeToggle />
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-20 text-center">
         <motion.div
